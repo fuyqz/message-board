@@ -1,0 +1,27 @@
+留言板开发流程
+
+前端页面 vue+css
+
+页面 js :
+data:{}
+onLoad(){
+  token ->存在 登录 
+            ->不存在 创建token 调用loginWithMp函数 返回数据到前端
+	->列表查询	 
+}
+methos(){
+  getList(){} 列表查询函数
+  publish(){} 渲染前端数据
+}
+
+后端 js :
+
+引入第三方库 jwt
+初始化 数据库 appid等
+实现函数(以loginWithMp为例)
+发送request请求 获取userid ->存在 
+		             ->不存在 ->新增用户
+			   ->返回数据
+声明token  ->存在 验证并登录
+	   -> 不存在 报错提示未登录	
+  
